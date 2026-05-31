@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treasure House — Chinese kitchen on Marlowes, Hemel Hempstead HP1 1LA</title>
+  <meta name="description" content="Treasure House (聚寶居) is a Chinese takeaway at 17 Marlowes, Hemel Hempstead HP1 1LA. Tuesday to Sunday, lunch and dinner. Call 01442 212209 to order.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --jade: #1F6B47;
+      --jade-deep: #143F2B;
+      --parchment: #F4EDDB;
+      --parchment-soft: #EFE6CE;
+      --ink: #1A1612;
+      --gold: #C9A24B;
+      --rule: rgba(26, 22, 18, 0.18);
+    }
+
+    *,
+    *::before,
+    *::after { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
+      font-size: clamp(16px, 1.05vw + 13px, 19px);
+      line-height: 1.55;
+      font-feature-settings: "kern", "liga", "onum";
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: color .2s ease, border-color .2s ease;
+    }
+    a:hover { color: var(--jade); border-bottom-color: var(--jade); }
+
+    .wrap {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ---------- Top bar ---------- */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 0 18px;
+      border-bottom: 1px solid var(--rule);
+      font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .topbar .seal {
+      color: var(--jade);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      font-size: 18px;
+    }
+    .topbar .call a { border: none; }
+    .topbar .call a:hover { color: var(--jade); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      padding: clamp(72px, 14vw, 156px) 0 clamp(60px, 9vw, 110px);
+      text-align: center;
+      position: relative;
+    }
+
+    .hero .characters {
+      display: inline-block;
+      color: var(--jade);
+      font-family: "Fraunces", "Songti SC", "Noto Serif SC", serif;
+      font-weight: 600;
+      font-size: clamp(34px, 6vw, 56px);
+      letter-spacing: 0.08em;
+      margin-bottom: 26px;
+      padding: 18px 28px;
+      border: 1.5px solid var(--jade);
+      border-radius: 4px;
+      background: rgba(31, 107, 71, 0.04);
+    }
+
+    .hero h1 {
+      font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+      font-weight: 600;
+      font-variation-settings: "opsz" 144;
+      font-size: clamp(48px, 9.6vw, 132px);
+      line-height: 0.95;
+      letter-spacing: -0.012em;
+      margin: 0 0 28px;
+      color: var(--ink);
+    }
+    .hero h1 .amp {
+      display: block;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.34em;
+      letter-spacing: 0.04em;
+      color: var(--jade);
+      margin: 18px 0 0;
+    }
+
+    .hero .sub {
+      font-family: "Newsreader", serif;
+      font-size: clamp(17px, 1.8vw, 22px);
+      max-width: 540px;
+      margin: 0 auto 38px;
+      color: rgba(26, 22, 18, 0.78);
+      font-style: italic;
+    }
+
+    .hero .meta {
+      font-family: "Fraunces", serif;
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .hero .meta span { color: var(--jade); margin: 0 14px; }
+
+    /* ---------- Section frame ---------- */
+    section { padding: clamp(72px, 10vw, 120px) 0; }
+
+    .eyebrow {
+      font-family: "Fraunces", serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--jade);
+      margin: 0 0 24px;
+    }
+
+    .section-title {
+      font-family: "Fraunces", serif;
+      font-weight: 600;
+      font-variation-settings: "opsz" 72;
+      font-size: clamp(34px, 5.4vw, 64px);
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+      margin: 0 0 18px;
+    }
+
+    .section-lede {
+      max-width: 580px;
+      font-size: clamp(17px, 1.4vw, 20px);
+      color: rgba(26, 22, 18, 0.78);
+      margin: 0 0 64px;
+    }
+
+    /* ---------- Kitchen / about ---------- */
+    .kitchen {
+      background: var(--parchment-soft);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .kitchen-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .kitchen-grid p {
+      font-size: clamp(17px, 1.4vw, 20px);
+      line-height: 1.65;
+      margin: 0 0 22px;
+    }
+    .kitchen-grid p:first-child::first-letter {
+      font-family: "Fraunces", serif;
+      font-weight: 800;
+      font-size: 4.2em;
+      line-height: 0.82;
+      float: left;
+      padding: 6px 12px 0 0;
+      color: var(--jade);
+    }
+    @media (max-width: 760px) {
+      .kitchen-grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+
+    /* ---------- Bill of fare ---------- */
+    .bill .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 52px;
+      flex-wrap: wrap;
+    }
+    .bill .section-head .right {
+      font-family: "Fraunces", serif;
+      font-size: 13px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--jade);
+      padding-bottom: 8px;
+    }
+
+    .dishes {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid var(--rule);
+    }
+    .dish {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--rule);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .dish.in {
+      opacity: 1;
+      transform: none;
+    }
+    .dish-name {
+      font-family: "Fraunces", serif;
+      font-weight: 600;
+      font-variation-settings: "opsz" 72;
+      font-size: clamp(24px, 2.6vw, 34px);
+      line-height: 1.1;
+      letter-spacing: -0.005em;
+    }
+    .dish-note {
+      font-family: "Newsreader", serif;
+      font-style: italic;
+      font-size: clamp(16px, 1.3vw, 19px);
+      color: rgba(26, 22, 18, 0.72);
+      max-width: 720px;
+    }
+
+    .bill-foot {
+      margin-top: 36px;
+      font-family: "Fraunces", serif;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(26, 22, 18, 0.6);
+    }
+    .bill-foot a { border-bottom-color: var(--jade); color: var(--jade); }
+
+    /* ---------- Visit ---------- */
+    .visit {
+      background: var(--jade-deep);
+      color: var(--parchment);
+    }
+    .visit a { color: var(--parchment); border-bottom-color: rgba(244, 237, 219, 0.35); }
+    .visit a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+    .visit .eyebrow { color: var(--gold); }
+    .visit .section-title { color: var(--parchment); }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 80px;
+    }
+    @media (max-width: 800px) {
+      .visit-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    .visit dl {
+      margin: 0;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      column-gap: 36px;
+      row-gap: 14px;
+      font-size: clamp(16px, 1.25vw, 19px);
+    }
+    .visit dt {
+      font-family: "Fraunces", serif;
+      font-size: 12px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-top: 6px;
+    }
+    .visit dd { margin: 0; }
+    .visit dd .big {
+      display: inline-block;
+      font-family: "Fraunces", serif;
+      font-variation-settings: "opsz" 72;
+      font-weight: 600;
+      font-size: clamp(28px, 3vw, 40px);
+      letter-spacing: -0.005em;
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .hours-table th,
+    .hours-table td {
+      text-align: left;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(244, 237, 219, 0.18);
+      font-size: clamp(15px, 1.1vw, 17px);
+    }
+    .hours-table th {
+      font-family: "Fraunces", serif;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .hours-table td.lunch,
+    .hours-table td.dinner {
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      color: rgba(244, 237, 219, 0.86);
+    }
+    .hours-table tr.closed td { color: rgba(244, 237, 219, 0.5); }
+    .hours-foot {
+      margin-top: 18px;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: rgba(244, 237, 219, 0.62);
+      font-style: italic;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      padding: 44px 0 60px;
+      border-top: 1px solid var(--rule);
+      font-family: "Fraunces", serif;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(26, 22, 18, 0.6);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    footer .seal-mini {
+      color: var(--jade);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      font-size: 14px;
+    }
+
+    /* ---------- Reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      .dish { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ---------- Small screens ---------- */
+    @media (max-width: 600px) {
+      .topbar { font-size: 11px; letter-spacing: 0.14em; }
+      .topbar .call a { padding: 6px 0; }
+      .hero { padding: 56px 0 48px; }
+      .hero .meta span { display: none; }
+      .hero .meta { display: flex; flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="wrap topbar" aria-label="Site header">
+    <div class="seal" aria-label="Treasure House">聚寶居</div>
+    <div class="call"><a href="tel:+441442212209">01442 212209</a></div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="wrap hero" aria-labelledby="masthead">
+      <div class="characters" aria-hidden="true">聚寶居</div>
+      <h1 id="masthead">
+        Treasure House
+        <span class="amp">— a Chinese kitchen on Marlowes —</span>
+      </h1>
+      <p class="sub">Authentic Chinese cooking from a small kitchen on Marlowes. Stir-fries, noodles, and the takeaway classics, made to order.</p>
+      <p class="meta">
+        17 Marlowes, HP1 1LA
+        <span>·</span>
+        Tuesday — Sunday
+        <span>·</span>
+        Lunch &amp; dinner service
+      </p>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="kitchen" aria-labelledby="kitchen-head">
+      <div class="wrap">
+        <p class="eyebrow">The Kitchen</p>
+        <h2 id="kitchen-head" class="section-title">A small kitchen,<br>cooking to order.</h2>
+        <div class="kitchen-grid">
+          <div>
+            <p>Treasure House sits on Marlowes, in the centre of Hemel Hempstead. The kitchen runs two services a day, Tuesday through Sunday — lunch from noon, then a longer dinner shift into the evening. Closed Mondays, open on bank holidays.</p>
+            <p>The menu is the British-Chinese takeaway canon: hot-and-sour soup, chow mein, salt-and-pepper specials, sweet-and-sour, crispy duck. Every order is cooked from scratch, so phoning ahead is the kindest thing you can do for the cook on a Friday night.</p>
+          </div>
+          <div>
+            <p>Order by phone for collection, or browse the full menu online at thetreasurehouse.co.uk. Group orders and party platters are welcome — call ahead so the kitchen can pace it properly.</p>
+            <p>If you've not ordered here before, the popular picks are the prawn toast, the crispy shredded duck, and a portion of Singapore-style noodles to share between two.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BILL OF FARE ============ -->
+    <section class="bill" aria-labelledby="bill-head">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Signatures</p>
+            <h2 id="bill-head" class="section-title">A handful of the<br>regulars' regulars.</h2>
+          </div>
+          <div class="right">A working menu — call to order</div>
+        </div>
+
+        <ul class="dishes" role="list">
+          <li class="dish">
+            <div class="dish-name">Prawn Toast</div>
+            <div class="dish-note">Sesame-crusted toast topped with prawn paste and deep-fried — the classic starter.</div>
+          </li>
+          <li class="dish">
+            <div class="dish-name">Hot &amp; Sour Soup</div>
+            <div class="dish-note">The Sichuan-Cantonese standard: black vinegar, white pepper, tofu, bamboo shoots, ribboned egg.</div>
+          </li>
+          <li class="dish">
+            <div class="dish-name">Crispy Shredded Duck</div>
+            <div class="dish-note">Slow-cooked duck, twice-fried until crisp, tossed with chilli and spring onion.</div>
+          </li>
+          <li class="dish">
+            <div class="dish-name">Beef Chow Mein</div>
+            <div class="dish-note">Wok-tossed egg noodles with strip beef, onion and bean sprouts. The house benchmark.</div>
+          </li>
+          <li class="dish">
+            <div class="dish-name">Singapore-Style Noodles</div>
+            <div class="dish-note">Thin rice noodles, curry-warmed, with prawn, char siu and a tumble of vegetables. Made to share.</div>
+          </li>
+          <li class="dish">
+            <div class="dish-name">Szechuan Chicken</div>
+            <div class="dish-note">Diced chicken in a chilli-forward, garlic-bright sauce. Ask if you'd like it dialled hotter.</div>
+          </li>
+          <li class="dish">
+            <div class="dish-name">Orange Chicken</div>
+            <div class="dish-note">Crisp-battered chicken with a sticky, citrus-bright glaze.</div>
+          </li>
+        </ul>
+
+        <p class="bill-foot">For the full menu and group orders, <a href="tel:+441442212209">call 01442 212209</a>.</p>
+      </div>
+    </section>
+
+    <!-- ============ VISIT ============ -->
+    <section class="visit" id="visit" aria-labelledby="visit-head">
+      <div class="wrap">
+        <p class="eyebrow">To Order &amp; To Find</p>
+        <h2 id="visit-head" class="section-title">17 Marlowes,<br>Hemel Hempstead.</h2>
+
+        <div class="visit-grid">
+          <dl>
+            <dt>Call</dt>
+            <dd><a href="tel:+441442212209" class="big">01442 212209</a></dd>
+
+            <dt>Email</dt>
+            <dd><a href="mailto:thetreasurehousetakeaway@yahoo.com">thetreasurehousetakeaway@yahoo.com</a></dd>
+
+            <dt>Find us</dt>
+            <dd>
+              17 Marlowes<br>
+              Hemel Hempstead<br>
+              Hertfordshire HP1 1LA
+            </dd>
+
+            <dt>Follow</dt>
+            <dd><a href="https://www.facebook.com/p/The-Treasure-House-Takeaway-61555464296980/" rel="noopener">Facebook</a></dd>
+          </dl>
+
+          <div>
+            <table class="hours-table" aria-label="Opening hours">
+              <thead><tr><th scope="col">Day</th><th scope="col" class="lunch">Lunch</th><th scope="col" class="dinner">Dinner</th></tr></thead>
+              <tbody>
+                <tr class="closed"><th scope="row">Monday</th><td class="lunch" colspan="2">Closed (open on bank holidays)</td></tr>
+                <tr><th scope="row">Tuesday</th><td class="lunch">12:00 — 14:00</td><td class="dinner">17:00 — 22:00</td></tr>
+                <tr><th scope="row">Wednesday</th><td class="lunch">12:00 — 14:00</td><td class="dinner">17:00 — 22:00</td></tr>
+                <tr><th scope="row">Thursday</th><td class="lunch">12:00 — 14:00</td><td class="dinner">17:00 — 22:00</td></tr>
+                <tr><th scope="row">Friday</th><td class="lunch">12:00 — 14:00</td><td class="dinner">17:00 — 22:00</td></tr>
+                <tr><th scope="row">Saturday</th><td class="lunch">12:00 — 14:00</td><td class="dinner">17:00 — 22:00</td></tr>
+                <tr><th scope="row">Sunday</th><td class="lunch">12:00 — 14:00</td><td class="dinner">17:00 — 22:00</td></tr>
+              </tbody>
+            </table>
+            <p class="hours-foot">Bank holiday hours may vary — please call ahead.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap" aria-label="Site footer">
+    <div><span class="seal-mini">聚寶居</span> &nbsp; Treasure House &nbsp;·&nbsp; Hemel Hempstead</div>
+    <div>17 Marlowes &nbsp;·&nbsp; HP1 1LA</div>
+  </footer>
+
+  <script>
+    // Restrained scroll-reveal on the signatures list — no other motion on the page.
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+          if (e.isIntersecting) {
+            const idx = Array.from(e.target.parentNode.children).indexOf(e.target);
+            e.target.style.transitionDelay = (idx * 70) + 'ms';
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.18 });
+      document.querySelectorAll('.dish').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.dish').forEach(el => el.classList.add('in'));
+    }
+  </script>
+
+</body>
+</html>
